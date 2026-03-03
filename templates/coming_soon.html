@@ -1,6 +1,11 @@
-<!doctype html>
-<html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>功能建设中</title>
-<style>body{font-family:Inter,sans-serif;background:#fff7ed;padding:40px}.box{max-width:760px;margin:auto;background:#fff;padding:24px;border-radius:12px;border:1px solid #fed7aa}a{color:#9a3412}</style></head>
-<body><div class="box"><h1>功能建设中</h1><p><strong>{{ feature_name }}</strong> 暂未开放，当前页面为预留接口。</p><a href="/">返回主页</a></div></body>
-</html>
+{% extends "base.html" %}
+{% block title %}功能建设中{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>功能建设中</h1>
+  <p><strong>{{ feature_name }}</strong> 暂未开放，当前页面为预留接口。</p>
+</section>
+<div class="card" style="margin-top:20px;">
+  <a class="btn secondary" href="/function">返回 Function 页面</a>
+</div>
+{% endblock %}
