@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import sqlite3
 import subprocess
 import time
@@ -314,6 +315,17 @@ st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 
 INTERVENTION_COLUMNS = ["strategy_id", "target_scope", "action_type", "payload", "step"]
 INTERVENTION_DESIGN_COLUMNS = ["strategy_id", "target_scope", "payload", "step"]
+INTERVENTION_EXPORT_COLUMNS = [
+    "time_step",
+    "intervention_type",
+    "content",
+    "target_group",
+    "target_id",
+    "ratio",
+    "attitude_target",
+    "user_profile",
+    "strategy_id",
+]
 INTERVENTION_TYPE_CONFIGS = [
     {
         "key": "broadcast",
@@ -364,6 +376,80 @@ INTERVENTION_TYPE_CONFIGS = [
         ],
     },
 ]
+
+ACTION_TYPE_MAP = {
+    "broadcast": "broadcast",
+    "bribe": "bribery",
+    "bribery": "bribery",
+    "register": "register_user",
+    "register_user": "register_user",
+}
+
+
+def normalize_intervention_type(raw_type: str) -> str:
+    key = (raw_type or "").strip().lower()
+    return ACTION_TYPE_MAP.get(key, key or "broadcast")
+
+
+def parse_target_scope(scope: str) -> tuple[str, str, str]:
+    scope = (scope or "").strip()
+    if not scope:
+        return "", "", ""
+    tokens = re.split(r"[|;,]", scope)
+    target_group = ""
+    target_id = ""
+    ratio = ""
+    for token in tokens:
+        item = token.strip()
+        if not item:
+            continue
+        if ":" in item:
+            key, value = item.split(":", 1)
+            key = key.strip().lower()
+            value = value.strip()
+            if key in {"group", "target_group"}:
+                target_group = value
+            elif key in {"agent", "target", "target_id", "id"}:
+                target_id = value.lstrip("@")
+            elif key == "ratio":
+                ratio = value
+        else:
+            if item.startswith("@") or item.isdigit():
+                target_id = item.lstrip("@")
+            else:
+                target_group = item
+    return target_group, target_id, ratio
+
+
+def build_intervention_export(df: pd.DataFrame) -> pd.DataFrame:
+    if df.empty:
+        return pd.DataFrame(columns=INTERVENTION_EXPORT_COLUMNS)
+
+    rows: list[dict[str, str]] = []
+    for record in df.to_dict("records"):
+        target_group, target_id, ratio = parse_target_scope(str(record.get("target_scope", "") or ""))
+        payload = str(record.get("payload", "") or "").strip()
+        normalized_type = normalize_intervention_type(str(record.get("action_type", "") or ""))
+        try:
+            time_step = int(record.get("time_step") or record.get("step", 0))
+        except (TypeError, ValueError):
+            time_step = 0
+
+        rows.append(
+            {
+                "time_step": time_step,
+                "intervention_type": normalized_type,
+                "content": payload,
+                "target_group": target_group,
+                "target_id": target_id,
+                "ratio": ratio,
+                "attitude_target": "",
+                "user_profile": payload if normalized_type == "register_user" else "",
+                "strategy_id": record.get("strategy_id", ""),
+            }
+        )
+
+    return pd.DataFrame(rows, columns=INTERVENTION_EXPORT_COLUMNS)
 
 
 def initial_attitude_df() -> pd.DataFrame:
@@ -697,12 +783,15 @@ def simulation_console():
     else:
         cleaned_interventions = intervention_df.copy()
         cleaned_interventions = cleaned_interventions.dropna(how="all")
-        cleaned_interventions = cleaned_interventions[cleaned_interventions["strategy_id"].notnull() & cleaned_interventions["action_type"].notnull()]
+        cleaned_interventions = cleaned_interventions[
+            cleaned_interventions["strategy_id"].notnull() & cleaned_interventions["action_type"].notnull()
+        ]
         if not cleaned_interventions.empty:
             cleaned_interventions["step"] = cleaned_interventions["step"].fillna(0).astype(int)
+            export_df = build_intervention_export(cleaned_interventions)
             UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
             inline_target = UPLOAD_DIR / f"intervention_designer_{int(time.time())}.csv"
-            cleaned_interventions.to_csv(inline_target, index=False)
+            export_df.to_csv(inline_target, index=False)
             intervention_path_resolved = inline_target
             st.caption(f"{dual('Using designed interventions saved to', '使用设计的干预，已保存至')} {path_to_display(inline_target)}")
 

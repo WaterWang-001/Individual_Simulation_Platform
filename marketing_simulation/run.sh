@@ -14,7 +14,6 @@ export MARS_ENV_FILE="${DATA_DIR}/.env"
 export MARS_DB_PATH="${DATA_DIR}/oasis_database.db"
 export MARS_INTERVENTION_PATH="${SIM_DIR}/intervention_messages.csv"
 export MARS_MODEL_BASE_URL="${MARS_MODEL_BASE_URL:-https://api.example.com/v1}"  # 请按需修改
-DEFAULT_API_KEY="sk-your-api-key"
 export MARS_MODEL_API_KEY="${MARS_MODEL_API_KEY:-$DEFAULT_API_KEY}"  # 请替换为真实 key
 
 # 2. (可选) 检查并安装缺失依赖，如需自动安装请取消下方注释

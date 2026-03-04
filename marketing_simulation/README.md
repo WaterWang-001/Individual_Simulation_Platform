@@ -9,11 +9,11 @@
 编辑 `run.sh` 中的 `MARS_MODEL_BASE_URL`、`MARS_MODEL_API_KEY` 行即可替换模型服务配置。例如：
 
 ```bash
-export MARS_MODEL_BASE_URL="https://api.ai-gaochao.cn/v1"
-export MARS_MODEL_API_KEY="sk-N6kAxyqq6wU0vfvL9dF10bBb19A94a448c8606CdA325D507"
+export MARS_MODEL_BASE_URL=""
+export MARS_MODEL_API_KEY=""
 ```
 ```bash
-cd /remote-home/JuelinW/oasis_project/MARS/marketing_simulation
+cd Individual_Simulation_Platform/marketing_simulation
 bash run.sh
 ```
 
