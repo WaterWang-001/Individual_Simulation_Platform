@@ -1,0 +1,6 @@
+pyproject.toml
+oasis.egg-info/PKG-INFO
+oasis.egg-info/SOURCES.txt
+oasis.egg-info/dependency_links.txt
+oasis.egg-info/requires.txt
+oasis.egg-info/top_level.txt
