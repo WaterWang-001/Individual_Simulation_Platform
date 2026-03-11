@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "model_name": null,
+  "report": {
+    "topic": "儿童流感疫苗认知",
+    "executive_summary": "本次围绕“儿童流感疫苗认知”的自动化访谈共覆盖 1 个对象，形成了若干可用于研究判断的共性与差异结论。",
+    "methodology": {
+      "target_population": "有学龄前儿童的家长",
+      "sample_size": 1,
+      "report_style": "professional"
+    },
+    "sample_profile": {
+      "persona_count": 3,
+      "diversity_tags": [
+        "低参与",
+        "信息充分",
+        "成本敏感",
+        "支持派",
+        "观望派",
+        "跟随型"
+      ]
+    },
+    "key_findings": [
+      "本对象对“儿童流感疫苗认知”给出了 4 个有效回答，可作为单个样本的经验观察。"
+    ],
+    "theme_analysis": {
+      "common_patterns": [
+        "本对象对“儿童流感疫苗认知”给出了 4 个有效回答，可作为单个样本的经验观察。"
+      ],
+      "differences": [
+        "样本间在态度强弱、风险感知和行动条件上存在差异。"
+      ],
+      "risks": [
+        "当前聚合结果仍受样本量与 persona 多样性的限制。"
+      ]
+    },
+    "population_segments": [
+      {
+        "persona_id": "persona_01",
+        "summary": "有学龄前儿童的家长中的开放支持类型，围绕儿童流感疫苗认知表现出整体较支持，愿意分享正向经验。"
+      }
+    ],
+    "recommendations": [
+      "补充更多具有差异特征的对象，以增强研究结论的稳健性。",
+      "未找到模型配置 project_config.json，已使用规则回退。"
+    ],
+    "limitations": [
+      "当前版本以单轮自动化编排为主，复杂追问策略仍可继续增强。",
+      "未找到模型配置 project_config.json，已使用规则回退。"
+    ]
+  }
+}

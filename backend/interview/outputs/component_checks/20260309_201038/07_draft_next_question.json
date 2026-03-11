@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "model_name": null,
+  "stage": {
+    "current_stage": "背景与基本信息",
+    "stage_goal": "围绕“背景与基本信息”收集足够信息以服务研究目标。",
+    "must_cover_remaining": [
+      1
+    ],
+    "next_focus": 1,
+    "used_turns": 0,
+    "warnings": [
+      "未找到模型配置 project_config.json，已使用规则回退。"
+    ]
+  },
+  "action": {
+    "action": "ask_question",
+    "target_question_id": 1,
+    "reason_tag": "plan_driven"
+  },
+  "target_question": {
+    "id": 1,
+    "question": "请先介绍一下孩子的年龄和健康情况。",
+    "type": "text_input",
+    "stage_name": "背景与基本信息",
+    "intent": "覆盖该问题对应的信息槽位",
+    "optional": false,
+    "followup_hint": "如果回答模糊，则追问具体经历、原因或条件。",
+    "options": null,
+    "scale": null,
+    "warnings": [
+      "未找到模型配置 project_config.json，已使用规则回退。"
+    ]
+  },
+  "question_text": "请先介绍一下孩子的年龄和健康情况。",
+  "coverage_update_hint": "如果回答模糊，则追问具体经历、原因或条件。"
+}

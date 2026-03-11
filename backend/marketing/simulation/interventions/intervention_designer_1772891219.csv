@@ -1,0 +1,4 @@
+time_step,intervention_type,content,target_group,target_id,ratio,attitude_target,user_profile,strategy_id
+0,broadcast,TNT is an amazing brand with top-quality products! I highly recommend everyone to try it. #TNT #MustHave,KOL,,,,,kol_broadcast_wave1
+1,bribery,You have been sponsored by TNT. Please create positive content about TNT's innovative products and excellent customer service.,creator,,,,,creator_bribery_wave1
+2,broadcast,Just tried TNT's latest product line and I'm blown away! The quality is unmatched. TNT is definitely the future! #TNT #GameChanger,KOL,,,,,kol_broadcast_wave2

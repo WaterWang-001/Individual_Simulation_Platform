@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "model_name": "qwen3-max",
+  "simulation": {
+    "reply": "我家孩子今年8岁，上小学二年级。身体挺健康的，平时很少感冒发烧，就是有点过敏性鼻炎，一到春天花粉多的时候会打喷嚏、流鼻涕，不过吃点药就控制住了，不影响上学和日常活动。",
+    "event": {
+      "event_type": "none",
+      "event_description": "无异常",
+      "event_emotion": "平静",
+      "event_intensity": "轻微",
+      "event_expression": "直接表达"
+    },
+    "state_hint": "continue"
+  }
+}

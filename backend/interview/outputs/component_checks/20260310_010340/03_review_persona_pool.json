@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "model_name": "qwen3-max",
+  "review": {
+    "coverage_ok": true,
+    "homogeneity_risk": "low",
+    "missing_segments": [],
+    "recommendations": []
+  }
+}

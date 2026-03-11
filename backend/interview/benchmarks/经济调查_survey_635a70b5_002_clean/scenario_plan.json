@@ -1,0 +1,50 @@
+{
+  "1": {
+    "event_type": "user_error_text_input",
+    "event_description": "开放题用户错误：只给出极短回答或答非所问",
+    "event_emotion": "疲惫",
+    "event_intensity": "强烈",
+    "event_expression": "直接表达",
+    "question_type": "text_input"
+  },
+  "2": {
+    "event_type": "none",
+    "event_description": "无异常",
+    "event_emotion": "平静",
+    "event_intensity": "中等",
+    "event_expression": "含蓄表达",
+    "question_type": "text_input"
+  },
+  "3": {
+    "event_type": "none",
+    "event_description": "无异常",
+    "event_emotion": "平静",
+    "event_intensity": "中等",
+    "event_expression": "直接表达",
+    "question_type": "text_input"
+  },
+  "4": {
+    "event_type": "none",
+    "event_description": "无异常",
+    "event_emotion": "平静",
+    "event_intensity": "轻微",
+    "event_expression": "直接表达",
+    "question_type": "text_input"
+  },
+  "5": {
+    "event_type": "self_harm_signal",
+    "event_description": "被访者透露潜在自伤或他伤倾向",
+    "event_emotion": "绝望",
+    "event_intensity": "中等",
+    "event_expression": "情绪化表达",
+    "question_type": "text_input"
+  },
+  "6": {
+    "event_type": "none",
+    "event_description": "无异常",
+    "event_emotion": "平静",
+    "event_intensity": "中等",
+    "event_expression": "含蓄表达",
+    "question_type": "text_area"
+  }
+}

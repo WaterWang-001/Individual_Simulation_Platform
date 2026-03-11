@@ -1,0 +1,56 @@
+{
+  "ok": true,
+  "model_name": null,
+  "report": {
+    "topic": "儿童流感疫苗认知",
+    "user_need_response": "本报告围绕“了解家长对流感风险、信息来源、接种顾虑与决策逻辑的看法”整理该对象的经历、判断和关键顾虑。",
+    "subject_summary": "有学龄前儿童的家长中的开放支持类型，围绕儿童流感疫苗认知表现出整体较支持，愿意分享正向经验。",
+    "questionnaire_aligned_findings": [
+      {
+        "question_id": 1,
+        "question": "请先介绍一下孩子的年龄和健康情况。",
+        "answer": "就请先介绍一下孩子的年龄和健康情况。来说，我会更关注实际经验、影响和可行性。"
+      },
+      {
+        "question_id": 2,
+        "question": "你通常通过哪些渠道了解儿童流感相关信息？",
+        "answer": null
+      },
+      {
+        "question_id": 3,
+        "question": "你怎么看待儿童接种流感疫苗这件事？",
+        "answer": null
+      },
+      {
+        "question_id": 4,
+        "question": "如果最终没有接种，最主要的顾虑是什么？",
+        "answer": null
+      }
+    ],
+    "traits_and_patterns": {
+      "behavior_habits": [],
+      "language_habits": []
+    },
+    "risks_and_concerns": [
+      "部分结论仍基于有限轮次访谈，需要结合更多样本验证。"
+    ],
+    "actionable_recommendations": [],
+    "evidence_trace": [
+      {
+        "role": "interviewer",
+        "content": "请先介绍一下孩子的年龄和健康情况。"
+      },
+      {
+        "role": "interviewee",
+        "content": "就请先介绍一下孩子的年龄和健康情况。来说，我会更关注实际经验、影响和可行性。"
+      }
+    ],
+    "confidence_notes": {
+      "level": "medium",
+      "answer_count": 1,
+      "warnings": [
+        "模型 qwen3-max 配置无效: 环境变量 DASHSCOPE_API_KEY 未设置，已使用规则回退。"
+      ]
+    }
+  }
+}

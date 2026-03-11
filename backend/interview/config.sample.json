@@ -1,0 +1,11 @@
+{
+  "server_name": "intelligent-interview-platform",
+  "project_root": ".",
+  "default_outputs_dir": "./outputs",
+  "default_clean_only": true,
+  "project_model_config": "./project_config.json",
+  "models": {
+    "default_interviewer": "qwen3-max",
+    "default_interviewee": "qwen3-max"
+  }
+}

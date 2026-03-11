@@ -1,0 +1,5 @@
+time_step,intervention_type,content,target_group,target_id,ratio,attitude_target,user_profile,strategy_id
+0,broadcast,"Just test-drove the new AuroraEV Aurora X — 650km range, 0-100 in 3.2s, and zero emissions. This is the future of driving and I'm completely sold. #AuroraEV #ElectricFuture",KOL,,,,,kol_seed_awareness
+1,bribery,"You are partnering with AuroraEV. Please create an in-depth, authentic review post about AuroraEV's superior battery technology, charging network, and eco-friendly mission. Emphasize how switching to AuroraEV is both a lifestyle upgrade and an environmental responsibility.",creator,,,,,creator_deep_review
+2,broadcast,🚗⚡ AuroraEV Official: Limited-time launch offer — get 5000 USD off your first AuroraEV order + free home charging installation! The green revolution is here. Are you in? #AuroraEV #GoGreen #ZeroEmissions,,,0.5,,,official_account_launch
+3,broadcast,"Beyond the car itself — choosing AuroraEV means choosing cleaner air, lower carbon footprint, and a sustainable future for our children. My whole family made the switch and we couldn't be happier. #GreenTravel #AuroraEV #SustainableLiving",KOL,,,,,kol_green_lifestyle_push

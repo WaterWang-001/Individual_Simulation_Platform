@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "model_name": null,
+  "plan": {
+    "topic": "儿童流感疫苗认知",
+    "intro_text": "本次访谈围绕“儿童流感疫苗认知”展开，重点了解有学龄前儿童的家长的经历、判断与需求。",
+    "closing_prompt": "感谢你的分享。如果还有想补充的地方，可以在最后再补充一句。",
+    "stages": [
+      {
+        "stage_id": "stage_1",
+        "stage_name": "背景与基本信息",
+        "stage_goal": "围绕“背景与基本信息”收集足够信息以服务研究目标。",
+        "question_ids": [
+          1
+        ],
+        "must_cover": [
+          1
+        ]
+      },
+      {
+        "stage_id": "stage_2",
+        "stage_name": "核心主题探索",
+        "stage_goal": "围绕“核心主题探索”收集足够信息以服务研究目标。",
+        "question_ids": [
+          2,
+          3,
+          4
+        ],
+        "must_cover": [
+          2,
+          3
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "question": "请先介绍一下孩子的年龄和健康情况。",
+        "type": "text_input",
+        "stage_name": "背景与基本信息",
+        "intent": "覆盖该问题对应的信息槽位",
+        "optional": false,
+        "followup_hint": "如果回答模糊，则追问具体经历、原因或条件。",
+        "options": null,
+        "scale": null
+      },
+      {
+        "id": 2,
+        "question": "你通常通过哪些渠道了解儿童流感相关信息？",
+        "type": "text_input",
+        "stage_name": "核心主题探索",
+        "intent": "覆盖该问题对应的信息槽位",
+        "optional": false,
+        "followup_hint": "如果回答模糊，则追问具体经历、原因或条件。",
+        "options": null,
+        "scale": null
+      },
+      {
+        "id": 3,
+        "question": "你怎么看待儿童接种流感疫苗这件事？",
+        "type": "text_input",
+        "stage_name": "核心主题探索",
+        "intent": "覆盖该问题对应的信息槽位",
+        "optional": false,
+        "followup_hint": "如果回答模糊，则追问具体经历、原因或条件。",
+        "options": null,
+        "scale": null
+      },
+      {
+        "id": 4,
+        "question": "如果最终没有接种，最主要的顾虑是什么？",
+        "type": "text_input",
+        "stage_name": "核心主题探索",
+        "intent": "覆盖该问题对应的信息槽位",
+        "optional": false,
+        "followup_hint": "如果回答模糊，则追问具体经历、原因或条件。",
+        "options": null,
+        "scale": null
+      }
+    ],
+    "must_cover_ids": [
+      1,
+      2,
+      3
+    ],
+    "sensitive_points": [],
+    "completion_rule": {
+      "min_must_cover": 3,
+      "max_turns": 8,
+      "stop_when": "must_cover 完成且没有新的高价值追问点"
+    },
+    "warnings": [
+      "未找到模型配置 project_config.json，已使用规则回退。"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+你是资深访谈分析师。请基于完整对话和回填问卷，输出对受访者的详细总结。
+
+要求：
+1) 同时分析“问卷相关特征”和“问卷外的人格/表达特征”。
+2) 识别稳定偏好、矛盾点、风险信号与信息缺口。
+3) 给出可执行 insight（下一轮访谈建议/干预建议）。
+4) 输出必须是严格JSON。
+
+输出格式：
+{{
+  "profile_summary": "...",
+  "questionnaire_traits": ["..."],
+  "general_personality_traits": ["..."],
+  "communication_style": ["..."],
+  "consistency_and_conflicts": ["..."],
+  "risk_signals": ["..."],
+  "insights": ["..."],
+  "next_interview_suggestions": ["..."]
+}}
+
+问卷：
+{questionnaire_json}
+
+回填问卷：
+{filled_json}
+
+完整对话：
+{conversation_history}

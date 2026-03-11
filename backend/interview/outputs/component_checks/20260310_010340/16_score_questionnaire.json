@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "score": {
+    "total": 3,
+    "score": 0.9167,
+    "details": [
+      {
+        "id": 1,
+        "type": "single_choice",
+        "ground_truth": "A",
+        "pred": "a",
+        "score": 1.0
+      },
+      {
+        "id": 2,
+        "type": "Likert",
+        "ground_truth": "非常同意",
+        "pred": "同意",
+        "score": 0.75
+      },
+      {
+        "id": 3,
+        "type": "text_input",
+        "ground_truth": "influenza vaccine awareness",
+        "pred": "Influenza vaccine awareness",
+        "score": 1.0
+      }
+    ],
+    "by_type": {
+      "single_choice": {
+        "count": 1,
+        "score_sum": 1.0,
+        "avg_score": 1.0
+      },
+      "Likert": {
+        "count": 1,
+        "score_sum": 0.75,
+        "avg_score": 0.75
+      },
+      "text_input": {
+        "count": 1,
+        "score_sum": 1.0,
+        "avg_score": 1.0
+      }
+    }
+  }
+}

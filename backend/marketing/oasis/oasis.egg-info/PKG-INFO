@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: oasis
+Version: 0.2.3
+Summary: Forked OASIS multi-agent social simulation framework
+Author: OASIS Contributors
+License: Apache-2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Requires-Dist: camel-ai>=0.1.0
+Requires-Dist: igraph>=0.10
+Requires-Dist: neo4j>=5.10
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=2.0
+Requires-Dist: scikit-learn>=1.3
+Requires-Dist: sentence-transformers>=2.2
+Requires-Dist: torch>=2.0
+Requires-Dist: tqdm>=4.65
+Requires-Dist: transformers>=4.35

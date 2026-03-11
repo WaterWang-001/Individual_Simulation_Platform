@@ -1,0 +1,98 @@
+{
+  "ok": true,
+  "model_name": "qwen3-max",
+  "plan": {
+    "topic": "儿童流感疫苗认知",
+    "intro_text": "您好！感谢您参与本次访谈。我们希望了解您作为家长对儿童流感疫苗的看法、信息来源以及决策过程。您的回答将帮助我们更好地支持家庭健康决策。",
+    "closing_prompt": "非常感谢您的分享！如果还有其他您想补充的内容，欢迎随时告诉我们。",
+    "stages": [
+      {
+        "stage_id": "stage_1",
+        "stage_name": "背景与基本信息",
+        "stage_goal": "了解受访儿童的基本情况，为后续讨论提供上下文",
+        "question_ids": [
+          1
+        ],
+        "must_cover": [
+          1
+        ]
+      },
+      {
+        "stage_id": "stage_2",
+        "stage_name": "信息获取渠道",
+        "stage_goal": "探查家长获取流感相关信息的主要来源及其信任度",
+        "question_ids": [
+          2
+        ],
+        "must_cover": [
+          2
+        ]
+      },
+      {
+        "stage_id": "stage_3",
+        "stage_name": "疫苗态度与决策逻辑",
+        "stage_goal": "深入理解家长对流感疫苗的整体看法及是否接种的决策依据",
+        "question_ids": [
+          3,
+          4
+        ],
+        "must_cover": [
+          3
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "question": "请先介绍一下孩子的年龄和健康情况。",
+        "type": "text_input",
+        "stage_name": "背景与基本信息",
+        "intent": "建立受访者背景，判断孩子是否属于高风险或常规接种人群",
+        "optional": false,
+        "followup_hint": "如果孩子有慢性病或过敏史，可进一步询问是否影响疫苗决策"
+      },
+      {
+        "id": 2,
+        "question": "你通常通过哪些渠道了解儿童流感相关信息？",
+        "type": "text_input",
+        "stage_name": "信息获取渠道",
+        "intent": "识别信息来源的多样性与权威性，评估信息质量对决策的影响",
+        "optional": false,
+        "followup_hint": "可追问是否信任这些渠道，是否有因信息矛盾而犹豫"
+      },
+      {
+        "id": 3,
+        "question": "你怎么看待儿童接种流感疫苗这件事？",
+        "type": "text_input",
+        "stage_name": "疫苗态度与决策逻辑",
+        "intent": "捕捉整体态度（支持/犹豫/反对）及背后的价值观或经验依据",
+        "optional": false,
+        "followup_hint": "若表达犹豫或反对，自然引导至顾虑问题（Q4）"
+      },
+      {
+        "id": 4,
+        "question": "如果最终没有接种，最主要的顾虑是什么？",
+        "type": "text_input",
+        "stage_name": "疫苗态度与决策逻辑",
+        "intent": "明确未接种的核心障碍，用于识别干预点",
+        "optional": true,
+        "followup_hint": "仅在受访者表示未接种或犹豫时使用；可追问该顾虑是否可被缓解"
+      }
+    ],
+    "must_cover_ids": [
+      1,
+      2,
+      3
+    ],
+    "sensitive_points": [
+      "疫苗安全性担忧",
+      "对医疗系统不信任",
+      "既往不良接种经历"
+    ],
+    "completion_rule": {
+      "min_must_cover": 3,
+      "max_turns": 18,
+      "stop_when": "所有 must_cover_ids 问题已覆盖，且对家长的决策逻辑已有清晰理解"
+    }
+  }
+}

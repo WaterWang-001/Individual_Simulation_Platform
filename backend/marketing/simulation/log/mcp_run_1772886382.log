@@ -1,0 +1,8 @@
+=== STDOUT ===
+
+
+=== STDERR ===
+Traceback (most recent call last):
+  File "/Users/sizhewang/project/marketing_simulation/simulation/oasis_test_grouping.py", line 17, in <module>
+    from oasis import (ActionType, LLMAction, ManualAction, HeuristicAction)
+ImportError: cannot import name 'HeuristicAction' from 'oasis' (/opt/anaconda3/envs/oasis/lib/python3.11/site-packages/oasis/__init__.py)

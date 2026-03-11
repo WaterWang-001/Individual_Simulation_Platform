@@ -1,0 +1,9 @@
+{
+  "dataset_name": "父母对儿童的流感认知调查-12",
+  "survey_name": "父母对儿童流感及流感疫苗认知深度访谈大纲",
+  "record_count": 12,
+  "source_paths": {
+    "combined_path": "Benchmark/数据/dataset-1216/父母对儿童的流感认知调查-12/Health_questionnaire_combined.jsonl",
+    "template_path": "Benchmark/数据/dataset-1216/父母对儿童的流感认知调查-12/questionaire-health.json"
+  }
+}

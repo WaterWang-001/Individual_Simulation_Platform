@@ -1,0 +1,92 @@
+{
+  "saved_at": "2026-03-09T20:10:38",
+  "output_dir": "/Users/daishangzhe/实验室项目/智能访谈/智能访谈项目代码/自动化问答/fastmcp_claude_plugin/outputs/component_checks/20260309_201038",
+  "check_count": 17,
+  "checks": [
+    {
+      "name": "01_create_interview_task",
+      "file": "01_create_interview_task.json",
+      "ok": true
+    },
+    {
+      "name": "02_generate_candidate_personas",
+      "file": "02_generate_candidate_personas.json",
+      "ok": true
+    },
+    {
+      "name": "03_review_persona_pool",
+      "file": "03_review_persona_pool.json",
+      "ok": true
+    },
+    {
+      "name": "04_generate_interview_plan",
+      "file": "04_generate_interview_plan.json",
+      "ok": true
+    },
+    {
+      "name": "05_generate_interview_outline",
+      "file": "05_generate_interview_outline.json",
+      "ok": true
+    },
+    {
+      "name": "06_plan_interview_stage",
+      "file": "06_plan_interview_stage.json",
+      "ok": true
+    },
+    {
+      "name": "07_draft_next_question",
+      "file": "07_draft_next_question.json",
+      "ok": true
+    },
+    {
+      "name": "08_simulate_interviewee_reply",
+      "file": "08_simulate_interviewee_reply.json",
+      "ok": true
+    },
+    {
+      "name": "09_fill_questionnaire_from_history",
+      "file": "09_fill_questionnaire_from_history.json",
+      "ok": true
+    },
+    {
+      "name": "10_build_persona_from_answers",
+      "file": "10_build_persona_from_answers.json",
+      "ok": true
+    },
+    {
+      "name": "11_summarize_individual_interview",
+      "file": "11_summarize_individual_interview.json",
+      "ok": true
+    },
+    {
+      "name": "12_extract_research_insights_from_interview",
+      "file": "12_extract_research_insights_from_interview.json",
+      "ok": true
+    },
+    {
+      "name": "13_run_single_interview",
+      "file": "13_run_single_interview.json",
+      "ok": true
+    },
+    {
+      "name": "14_aggregate_interview_results",
+      "file": "14_aggregate_interview_results.json",
+      "ok": true
+    },
+    {
+      "name": "15_generate_professional_report",
+      "file": "15_generate_professional_report.json",
+      "ok": true
+    },
+    {
+      "name": "16_score_questionnaire",
+      "file": "16_score_questionnaire.json",
+      "ok": true
+    },
+    {
+      "name": "17_legacy_list_benchmark_cases",
+      "file": "17_legacy_list_benchmark_cases.json",
+      "ok": true
+    }
+  ]
+}

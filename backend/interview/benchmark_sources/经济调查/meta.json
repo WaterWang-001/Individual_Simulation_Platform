@@ -1,0 +1,9 @@
+{
+  "dataset_name": "经济调查",
+  "survey_name": "日本经济景气动向调查问卷",
+  "record_count": 30,
+  "source_paths": {
+    "combined_path": "Benchmark/数据/dataset-1216/经济调查/Economy_questionnaire_combined.jsonl",
+    "template_path": "Benchmark/数据/dataset-1216/经济调查/questionnaire-economy.json"
+  }
+}

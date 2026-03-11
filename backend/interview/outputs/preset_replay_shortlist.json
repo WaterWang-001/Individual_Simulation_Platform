@@ -1,0 +1,84 @@
+{
+  "shortlist": [
+    {
+      "survey_name": "大学生毕业就业选择调研问卷大纲",
+      "benchmark_dir": "benchmarks/学生就业调查_survey_4054b4ba_002_clean",
+      "interviewer_model": "qwen3-max",
+      "interviewee_model": "qwen3-max",
+      "handling_mode": "default",
+      "ablation_mode": "direct",
+      "score": 0.9796,
+      "used_turns": 11,
+      "event_total": 1,
+      "event_counts": {
+        "user_error_single_choice": 1
+      },
+      "followup_count": 2
+    },
+    {
+      "survey_name": "国家认同、移民态度与全球观问卷",
+      "benchmark_dir": "benchmarks/粤港澳大湾区居民国家认同感与基本信息调查数据集（附统计指标及人口学信息）_survey_5b354f8b_001_clean",
+      "interviewer_model": "gpt-4o",
+      "interviewee_model": "qwen3-max",
+      "handling_mode": "default",
+      "ablation_mode": "direct",
+      "score": 0.7801,
+      "used_turns": 66,
+      "event_total": 3,
+      "event_counts": {
+        "illegal_request": 1,
+        "user_error_single_choice": 1,
+        "cognitive_limit": 1
+      },
+      "followup_count": 3
+    },
+    {
+      "survey_name": "日本经济景气动向调查问卷",
+      "benchmark_dir": "benchmarks/经济调查_survey_635a70b5_001_clean",
+      "interviewer_model": "qwen3-max",
+      "interviewee_model": "qwen3-max",
+      "handling_mode": "default",
+      "ablation_mode": "direct",
+      "score": 0.6785,
+      "used_turns": 9,
+      "event_total": 2,
+      "event_counts": {
+        "contradictory_information": 2
+      },
+      "followup_count": 1
+    },
+    {
+      "survey_name": "International Students Time Management Questionnaire",
+      "benchmark_dir": "benchmarks/international_students_international_students_time_management_questionnaire_001_clean",
+      "interviewer_model": "deepseek-chat",
+      "interviewee_model": "qwen3-max",
+      "handling_mode": "default",
+      "ablation_mode": "direct",
+      "score": 0.6756,
+      "used_turns": 26,
+      "event_total": 4,
+      "event_counts": {
+        "hostility_or_distrust": 2,
+        "pace_disruption": 1,
+        "illegal_request": 1
+      },
+      "followup_count": 2
+    },
+    {
+      "survey_name": "云南省多县社区家庭综合情况调查问卷",
+      "benchmark_dir": "benchmarks/云南社区调查_survey_82bf107a_002_clean",
+      "interviewer_model": "gpt-4o",
+      "interviewee_model": "qwen3-max",
+      "handling_mode": "default",
+      "ablation_mode": "direct",
+      "score": 0.5691,
+      "used_turns": 21,
+      "event_total": 1,
+      "event_counts": {
+        "hostility_or_distrust": 1
+      },
+      "followup_count": 2
+    }
+  ],
+  "note": "high-score and eventful candidates for preset replay"
+}

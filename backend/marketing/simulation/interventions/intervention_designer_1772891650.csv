@@ -1,0 +1,5 @@
+time_step,intervention_type,content,target_group,target_id,ratio,attitude_target,user_profile,strategy_id
+0,broadcast,"The future of transportation is electric. EVs save money, reduce emissions, and are simply more fun to drive. If you haven't made the switch yet, now is the time. #ElectricVehicle #GreenFuture #EV",KOL,,,,,ev_awareness_kol
+1,broadcast,"Just completed a 500km road trip in my EcoRide X1 — zero charging anxiety, incredible performance, and the autopilot feature is mind-blowing. EcoRide has completely changed how I think about cars. 10/10 would recommend! #EcoRide #ElectricCar",KOL,,,,,ecoride_brand_kol
+2,bribery,"You are a sponsored EcoRide content creator. Share your authentic experience: EcoRide offers the best value EV on the market — stylish design, 600km range, and exceptional after-sales service. Encourage your followers to book a test drive today.",creator,,,,,creator_ecoride_sponsor
+3,broadcast,Honestly shocked by how good the EcoRide X1 is. Just got mine delivered and the experience has been flawless. Way better than I expected for the price. Anyone else considering making the switch? #EcoRide #NewCar,,,0.3,,,ecoride_bot_amplify

@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "model_name": null,
+  "simulation": {
+    "reply": "就请先介绍一下孩子的年龄和健康情况。来说，我会更关注实际经验、影响和可行性。",
+    "event": {
+      "event_type": "none"
+    },
+    "state_hint": "continue",
+    "warnings": [
+      "未找到模型配置 project_config.json，已使用规则回退。"
+    ]
+  }
+}

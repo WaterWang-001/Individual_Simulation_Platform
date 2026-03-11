@@ -1,0 +1,116 @@
+{
+  "ok": true,
+  "model_name": "qwen3-max",
+  "outline": {
+    "topic": "儿童流感疫苗认知",
+    "survey_name": "儿童流感疫苗认知",
+    "interview_goal": "获取家长对风险、接种和障碍的关键看法",
+    "intro_text": "您好，感谢您参与本次访谈。我们希望了解您作为家长对儿童流感疫苗的看法，包括您对接种必要性、风险和实际接种过程中可能遇到的困难等。您的回答将帮助我们更好地支持家庭健康决策。",
+    "stages": [
+      {
+        "stage_id": "stage_1",
+        "stage_name": "建立背景与接种经历",
+        "stage_goal": "了解受访者孩子基本信息及过往疫苗接种情况，建立对话基础",
+        "question_ids": [
+          1,
+          2
+        ],
+        "must_cover": [
+          1
+        ]
+      },
+      {
+        "stage_id": "stage_2",
+        "stage_name": "认知与态度探索",
+        "stage_goal": "探查家长对流感及其疫苗的风险认知、信任程度和态度来源",
+        "question_ids": [
+          3,
+          4,
+          5
+        ],
+        "must_cover": [
+          3,
+          4
+        ]
+      },
+      {
+        "stage_id": "stage_3",
+        "stage_name": "障碍与促进因素",
+        "stage_goal": "识别影响接种决策的实际障碍和潜在促进因素",
+        "question_ids": [
+          6,
+          7
+        ],
+        "must_cover": [
+          6
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "question": "您的孩子目前多大？是否曾接种过流感疫苗？如果接种过，大概每年都会打吗？",
+        "type": "text_input",
+        "stage_name": "建立背景与接种经历",
+        "intent": "获取基本人口学信息和接种历史，判断经验型或初次决策者",
+        "optional": false,
+        "followup_hint": "若未接种，可追问原因；若接种，可问决策过程"
+      },
+      {
+        "id": 2,
+        "question": "您通常通过哪些渠道了解儿童疫苗相关信息？（如医生、亲友、社交媒体等）",
+        "type": "text_input",
+        "stage_name": "建立背景与接种经历",
+        "intent": "识别信息来源，为后续态度形成提供上下文",
+        "optional": true,
+        "followup_hint": "可追问哪个渠道最可信，为什么"
+      },
+      {
+        "id": 3,
+        "question": "在您看来，儿童感染流感的风险有多大？严重吗？",
+        "type": "text_input",
+        "stage_name": "认知与态度探索",
+        "intent": "评估对疾病本身的风险感知",
+        "optional": false,
+        "followup_hint": "可追问是否有亲身经历或听说的案例"
+      },
+      {
+        "id": 4,
+        "question": "您对流感疫苗的安全性和有效性有多信任？",
+        "type": "Likert",
+        "stage_name": "认知与态度探索",
+        "intent": "量化对疫苗本身的信任程度",
+        "optional": false,
+        "followup_hint": "若信任度低，可问具体担忧点（如副作用、成分等）"
+      },
+      {
+        "id": 5,
+        "question": "有没有人（如家人、朋友、医生）强烈影响过您关于流感疫苗的决定？",
+        "type": "text_input",
+        "stage_name": "认知与态度探索",
+        "intent": "识别社会影响因素",
+        "optional": true,
+        "followup_hint": "可追问具体说了什么、如何影响决策"
+      },
+      {
+        "id": 6,
+        "question": "在安排孩子接种流感疫苗时，您遇到过哪些实际困难？（如时间、费用、地点、预约等）",
+        "type": "text_input",
+        "stage_name": "障碍与促进因素",
+        "intent": "识别结构性或操作性障碍",
+        "optional": false,
+        "followup_hint": "可追问是否因此放弃接种"
+      },
+      {
+        "id": 7,
+        "question": "什么样的支持或改变会让您更愿意带孩子接种流感疫苗？",
+        "type": "text_input",
+        "stage_name": "障碍与促进因素",
+        "intent": "挖掘潜在干预点",
+        "optional": true,
+        "followup_hint": "可结合前面提到的障碍进行针对性追问"
+      }
+    ],
+    "closing_prompt": "感谢您的分享！如果您还有其他想补充的内容，欢迎随时告诉我们。"
+  }
+}
