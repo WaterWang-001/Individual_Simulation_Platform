@@ -1,9 +1,0 @@
-{
-  "dataset_name": "粤港澳大湾区居民国家认同感与基本信息调查数据集（附统计指标及人口学信息）",
-  "survey_name": "国家认同、移民态度与全球观问卷",
-  "record_count": 11,
-  "source_paths": {
-    "combined_path": "Benchmark/数据/dataset-1216/粤港澳大湾区居民国家认同感与基本信息调查数据集（附统计指标及人口学信息）/Culture_questionnaire_combined.jsonl",
-    "template_path": "Benchmark/数据/dataset-1216/粤港澳大湾区居民国家认同感与基本信息调查数据集（附统计指标及人口学信息）/questionnaire-culture.json"
-  }
-}

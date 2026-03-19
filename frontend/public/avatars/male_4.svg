@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- shirt -->
+  <ellipse cx="32" cy="60" rx="14" ry="8" fill="#45B679"/>
+  <!-- buzz cut: tight dark cap, barely visible above face -->
+  <ellipse cx="32" cy="29" rx="15" ry="9" fill="#2E2E2E"/>
+  <!-- face -->
+  <circle cx="32" cy="36" r="14" fill="#FFCC99"/>
+  <!-- eyebrows (thicker for buzz-cut look) -->
+  <path d="M24 29 L30 28" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+  <path d="M34 28 L40 29" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+  <!-- eyes -->
+  <circle cx="27" cy="33" r="2.2" fill="#333"/>
+  <circle cx="37" cy="33" r="2.2" fill="#333"/>
+  <circle cx="27.9" cy="32.2" r="0.9" fill="white"/>
+  <circle cx="37.9" cy="32.2" r="0.9" fill="white"/>
+  <!-- nose -->
+  <ellipse cx="32" cy="37.5" rx="1.5" ry="1" fill="#EEB07A" opacity="0.7"/>
+  <!-- mouth (slight smirk) -->
+  <path d="M29 41 Q33 44.5 37 41.5" stroke="#CC4444" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>

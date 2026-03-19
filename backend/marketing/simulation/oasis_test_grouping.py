@@ -96,7 +96,7 @@ else:
 
 ATTITUDE_METRICS_LIST = list(ATTITUDE_CONFIG.keys())
 
-DEFAULT_MODEL_NAME = "gpt-4o-mini"
+DEFAULT_MODEL_NAME = "deepseek-chat"
 MODEL_NAME = os.getenv("MARS_MODEL_NAME", DEFAULT_MODEL_NAME)
 MODEL_BASE_URL = os.getenv("MARS_MODEL_BASE_URL", "").strip()
 MODEL_API_KEY = os.getenv("MARS_MODEL_API_KEY", "").strip()
@@ -331,8 +331,6 @@ async def main():
         #         logger.info("--- ✅ 'post' 表标注完成 ---")
         #     except Exception as e:
         #         logger.error(f"Attitude 标注失败: {e}", exc_info=True)
-        
-
 
     await env.close()
     logger.info("--- Simulation Finished ---")

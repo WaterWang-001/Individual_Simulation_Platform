@@ -1,5 +1,0 @@
-demo/config.json
-demo/demo_data/demo.db
-demo/__pycache__/
-demo/**/*.pyc
-demo/.streamlit/

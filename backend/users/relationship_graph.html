@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>IndividualSim · 关系网络图谱</title>
+<script src="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.js"></script>
+<link  href="https://unpkg.com/vis-network@9.1.9/dist/dist/vis-network.min.css" rel="stylesheet">
+<link  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Inter', system-ui, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ── 顶栏 ── */
+  header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px;
+    height: 52px;
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    flex-shrink: 0;
+    z-index: 10;
+  }
+  .logo { font-weight: 600; font-size: 15px; color: #58a6ff; letter-spacing: .3px; }
+  .logo span { color: #8b949e; font-weight: 400; }
+  .stat-badge {
+    background: rgba(88,166,255,.1);
+    border: 1px solid rgba(88,166,255,.25);
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 12px;
+    color: #58a6ff;
+  }
+  .spacer { flex: 1; }
+  .ctrl-btn {
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #c9d1d9;
+    font-size: 12px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: background .15s;
+  }
+  .ctrl-btn:hover { background: #30363d; }
+  .ctrl-btn.active { background: rgba(88,166,255,.15); border-color: #58a6ff; color: #58a6ff; }
+
+  /* ── 主体 ── */
+  .main { display: flex; flex: 1; overflow: hidden; }
+
+  /* ── 图谱画布 ── */
+  #graph-canvas {
+    flex: 1;
+    background: #0d1117;
+    position: relative;
+  }
+  #network { width: 100%; height: 100%; }
+
+  /* ── 右侧面板 ── */
+  aside {
+    width: 280px;
+    background: #161b22;
+    border-left: 1px solid #30363d;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .panel-section {
+    padding: 14px 16px;
+    border-bottom: 1px solid #21262d;
+  }
+  .panel-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    color: #8b949e;
+    margin-bottom: 10px;
+  }
+
+  /* 图例 */
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #c9d1d9;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 3px 4px;
+    transition: background .1s;
+  }
+  .legend-item:hover { background: #21262d; }
+  .legend-item.dimmed { opacity: .35; }
+  .legend-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .legend-line {
+    width: 18px; height: 3px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* 详情卡 */
+  #detail-card {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px 16px;
+  }
+  #detail-card .empty {
+    color: #8b949e;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  .detail-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #e6edf3;
+    margin-bottom: 4px;
+  }
+  .detail-meta {
+    font-size: 12px;
+    color: #8b949e;
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  .rel-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    background: #0d1117;
+    font-size: 12px;
+  }
+  .rel-item .peer { color: #c9d1d9; font-weight: 500; }
+  .rel-item .rtype {
+    margin-left: auto;
+    font-size: 11px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+  .rel-item .arrow { color: #8b949e; font-size: 10px; }
+
+  /* 搜索框 */
+  .search-wrap {
+    padding: 10px 16px;
+    border-bottom: 1px solid #21262d;
+  }
+  .search-input {
+    width: 100%;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    color: #c9d1d9;
+    outline: none;
+  }
+  .search-input:focus { border-color: #58a6ff; }
+  .search-input::placeholder { color: #484f58; }
+
+  /* 加载遮罩 */
+  #loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0d1117;
+    z-index: 5;
+    font-size: 14px;
+    color: #8b949e;
+    gap: 10px;
+  }
+  .spinner {
+    width: 18px; height: 18px;
+    border: 2px solid #30363d;
+    border-top-color: #58a6ff;
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">IndividualSim <span>· 关系网络图谱</span></div>
+  <div class="stat-badge" id="stat-nodes">— 人</div>
+  <div class="stat-badge" id="stat-edges">— 关系</div>
+  <div class="spacer"></div>
+  <button class="ctrl-btn" id="btn-physics" onclick="togglePhysics()">停止布局</button>
+  <button class="ctrl-btn" onclick="network && network.fit()">重置视图</button>
+</header>
+
+<div class="main">
+  <div id="graph-canvas">
+    <div id="loading"><div class="spinner"></div> 加载中…</div>
+    <div id="network"></div>
+  </div>
+
+  <aside>
+    <div class="search-wrap">
+      <input class="search-input" id="search-input" placeholder="搜索智能体姓名…" oninput="onSearch(this.value)">
+    </div>
+
+    <!-- 关系类型图例 -->
+    <div class="panel-section" style="max-height:300px;overflow-y:auto">
+      <div class="panel-title">关系类型</div>
+      <div id="legend"></div>
+    </div>
+
+    <!-- 节点详情 -->
+    <div id="detail-card">
+      <div class="panel-title">节点详情</div>
+      <div class="empty">点击节点查看详情</div>
+    </div>
+  </aside>
+</div>
+
+<script>
+// ── 关系类型颜色表 ────────────────────────────────────────────
+const REL_COLORS = {
+  '同班同学':       '#58a6ff',
+  '室友':           '#3fb950',
+  '导师-学生':      '#f78166',
+  '学长-学弟妹':    '#ffa657',
+  '课题组成员':     '#d2a8ff',
+  '学习小组':       '#79c0ff',
+  '好友':           '#56d364',
+  '普通朋友':       '#8b949e',
+  '前任':           '#ff7b72',
+  '社团成员':       '#e3b341',
+  '社团干部-普通成员': '#f0883e',
+  '学生会成员':     '#b392f0',
+  '志愿者队友':     '#7ee787',
+  '竞争者':         '#ff6e6e',
+  '矛盾/冲突':      '#da3633',
+  '恋人':           '#f778ba',
+  '兼职同事':       '#a5d6ff',
+};
+
+const GENDER_NODE_COLOR = {
+  male:    { background: '#1c3d5c', border: '#58a6ff', highlight: { background: '#2d5986', border: '#79c0ff' } },
+  female:  { background: '#3d1c3a', border: '#f778ba', highlight: { background: '#5c2a58', border: '#ff9fd0' } },
+};
+
+let network = null;
+let allNodes, allEdges;
+let physicsEnabled = true;
+let hiddenTypes = new Set();
+let profiles = [], relationships = [];
+let uid2profile = {};
+
+// ── 加载数据 ─────────────────────────────────────────────────
+async function loadData() {
+  const [pResp, rResp] = await Promise.all([
+    fetch('./student_profiles.json'),
+    fetch('./relationships.json'),
+  ]);
+  profiles      = await pResp.json();
+  const relData = await rResp.json();
+  relationships = relData.relationships;
+  uid2profile   = Object.fromEntries(profiles.map(p => [p.user_id, p]));
+}
+
+// ── 构建图谱 ─────────────────────────────────────────────────
+function buildGraph() {
+  // 节点
+  const nodes = profiles.map(p => {
+    const col = GENDER_NODE_COLOR[p.gender] || GENDER_NODE_COLOR.male;
+    return {
+      id:    p.user_id,
+      label: p.name,
+      title: `${p.name}\n${p.occupation}\n${p.major}`,
+      color: col,
+      font:  { color: '#c9d1d9', size: 13 },
+      shape: 'dot',
+      size:  14 + degree(p.user_id) * 2.5,
+    };
+  });
+
+  // 边
+  const edges = relationships.map((r, i) => ({
+    id:      i,
+    from:    r.agent1,
+    to:      r.agent2,
+    label:   r.type,
+    relType: r.type,
+    arrows:  r.directed ? { to: { enabled: true, scaleFactor: 0.7 } } : undefined,
+    color:   { color: REL_COLORS[r.type] || '#8b949e', opacity: 0.85,
+               highlight: REL_COLORS[r.type] || '#c9d1d9' },
+    font:    { color: REL_COLORS[r.type] || '#8b949e', size: 10,
+               strokeWidth: 2, strokeColor: '#0d1117', align: 'middle' },
+    width:   2,
+    smooth:  { type: 'continuous' },
+  }));
+
+  return { nodes, edges };
+}
+
+function degree(uid) {
+  return relationships.filter(r => r.agent1 === uid || r.agent2 === uid).length;
+}
+
+// ── 渲染图例 ─────────────────────────────────────────────────
+function renderLegend() {
+  const usedTypes = [...new Set(relationships.map(r => r.type))].sort();
+  const container = document.getElementById('legend');
+  container.innerHTML = usedTypes.map(t => `
+    <div class="legend-item" onclick="toggleType('${t}')" id="leg-${CSS.escape(t)}">
+      <div class="legend-line" style="background:${REL_COLORS[t]||'#8b949e'}"></div>
+      <span>${t}</span>
+      <span style="margin-left:auto;color:#484f58;font-size:11px">
+        ${relationships.filter(r=>r.type===t).length}
+      </span>
+    </div>`).join('');
+}
+
+// ── 切换类型显示 ─────────────────────────────────────────────
+function toggleType(type) {
+  if (hiddenTypes.has(type)) hiddenTypes.delete(type);
+  else hiddenTypes.add(type);
+
+  // 更新图例样式
+  const leg = document.getElementById('leg-' + CSS.escape(type));
+  if (leg) leg.classList.toggle('dimmed', hiddenTypes.has(type));
+
+  // 更新边可见性
+  const updates = allEdges.get().map(e => ({
+    id:     e.id,
+    hidden: hiddenTypes.has(e.relType),
+  }));
+  allEdges.update(updates);
+}
+
+// ── 节点详情 ─────────────────────────────────────────────────
+function showDetail(uid) {
+  const p = uid2profile[uid];
+  if (!p) return;
+
+  const rels = relationships.filter(r => r.agent1 === uid || r.agent2 === uid);
+  const card = document.getElementById('detail-card');
+
+  const relHtml = rels.map(r => {
+    const peerId  = r.agent1 === uid ? r.agent2 : r.agent1;
+    const peer    = uid2profile[peerId];
+    const isFrom  = r.directed && r.agent1 === uid;
+    const isTo    = r.directed && r.agent2 === uid;
+    const arrow   = isFrom ? '→' : isTo ? '←' : '';
+    const color   = REL_COLORS[r.type] || '#8b949e';
+    return `<div class="rel-item">
+      <span class="arrow">${arrow}</span>
+      <span class="peer">${peer?.name || peerId}</span>
+      <span class="rtype" style="background:${color}22;color:${color};border:1px solid ${color}44">${r.type}</span>
+    </div>`;
+  }).join('') || '<div style="color:#484f58;font-size:12px;margin-top:4px">暂无关系</div>';
+
+  card.innerHTML = `
+    <div class="panel-title">节点详情</div>
+    <div class="detail-name">${p.name}</div>
+    <div class="detail-meta">
+      ${p.gender === 'male' ? '♂' : '♀'} ${p.age} 岁 &nbsp;|&nbsp; ${p.occupation}<br>
+      专业：${p.major}<br>
+      MBTI：${p.mbti || '—'}
+    </div>
+    <div class="panel-title" style="margin-bottom:8px">关联关系（${rels.length}）</div>
+    ${relHtml}
+  `;
+}
+
+// ── 搜索 ─────────────────────────────────────────────────────
+function onSearch(val) {
+  const q = val.trim().toLowerCase();
+  if (!q) {
+    allNodes.update(profiles.map(p => ({ id: p.user_id, opacity: 1 })));
+    return;
+  }
+  allNodes.update(profiles.map(p => ({
+    id:      p.user_id,
+    opacity: p.name.toLowerCase().includes(q) ? 1 : 0.15,
+  })));
+  const match = profiles.find(p => p.name.toLowerCase().includes(q));
+  if (match) network.focus(match.user_id, { scale: 1.2, animation: true });
+}
+
+// ── 物理布局切换 ─────────────────────────────────────────────
+function togglePhysics() {
+  physicsEnabled = !physicsEnabled;
+  network.setOptions({ physics: { enabled: physicsEnabled } });
+  document.getElementById('btn-physics').textContent = physicsEnabled ? '停止布局' : '启用布局';
+  document.getElementById('btn-physics').classList.toggle('active', !physicsEnabled);
+}
+
+// ── 初始化 ───────────────────────────────────────────────────
+async function init() {
+  await loadData();
+
+  const { nodes, edges } = buildGraph();
+  allNodes = new vis.DataSet(nodes);
+  allEdges = new vis.DataSet(edges);
+
+  document.getElementById('stat-nodes').textContent = `${profiles.length} 人`;
+  document.getElementById('stat-edges').textContent = `${relationships.length} 关系`;
+
+  const options = {
+    physics: {
+      enabled: true,
+      forceAtlas2Based: {
+        gravitationalConstant: -60,
+        centralGravity: 0.005,
+        springLength: 120,
+        springConstant: 0.08,
+        damping: 0.6,
+      },
+      solver: 'forceAtlas2Based',
+      stabilization: { iterations: 180, updateInterval: 20 },
+    },
+    interaction: {
+      hover: true,
+      tooltipDelay: 200,
+      zoomView: true,
+      dragView: true,
+    },
+    edges: {
+      smooth: { type: 'continuous' },
+    },
+  };
+
+  network = new vis.Network(
+    document.getElementById('network'),
+    { nodes: allNodes, edges: allEdges },
+    options
+  );
+
+  network.on('stabilizationIterationsDone', () => {
+    document.getElementById('loading').style.display = 'none';
+    network.setOptions({ physics: { enabled: false } });
+    physicsEnabled = false;
+    document.getElementById('btn-physics').textContent = '启用布局';
+    document.getElementById('btn-physics').classList.add('active');
+  });
+
+  network.on('click', params => {
+    if (params.nodes.length > 0) {
+      showDetail(params.nodes[0]);
+      // 高亮邻居
+      const connectedEdges = network.getConnectedEdges(params.nodes[0]);
+      const connectedNodes = network.getConnectedNodes(params.nodes[0]);
+      allNodes.update(profiles.map(p => ({
+        id:      p.user_id,
+        opacity: connectedNodes.includes(p.user_id) || p.user_id === params.nodes[0] ? 1 : 0.2,
+      })));
+      allEdges.update(allEdges.get().map(e => ({
+        id:      e.id,
+        opacity: connectedEdges.includes(e.id) ? 1 : 0.1,
+      })));
+    } else {
+      // 点空白处恢复
+      allNodes.update(profiles.map(p => ({ id: p.user_id, opacity: 1 })));
+      allEdges.update(allEdges.get().map(e => ({ id: e.id, opacity: 0.85 })));
+    }
+  });
+
+  renderLegend();
+}
+
+init().catch(err => {
+  document.getElementById('loading').innerHTML =
+    `<span style="color:#ff7b72">加载失败：${err.message}</span>`;
+});
+</script>
+</body>
+</html>

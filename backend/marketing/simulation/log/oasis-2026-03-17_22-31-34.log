@@ -1,0 +1,9 @@
+2026-03-17 22:31:39,973 - oasis.env - INFO - update rec table.
+2026-03-17 22:31:40,536 - oasis.env - INFO - performed all actions.
+2026-03-17 22:31:40,537 - oasis.env - INFO - update rec table.
+2026-03-17 22:31:40,823 - oasis.env - INFO - performed all actions.
+2026-03-17 22:31:40,825 - oasis.env - INFO - update rec table.
+2026-03-17 22:31:41,035 - oasis.env - INFO - performed all actions.
+2026-03-17 22:31:41,037 - oasis.env - INFO - update rec table.
+2026-03-17 22:31:41,241 - oasis.env - INFO - performed all actions.
+2026-03-17 22:31:41,242 - oasis.env - INFO - Simulation finished! Please check the results in the database: /tmp/online_sim/osim_20260317_223128_b05e11/oasis.db. Note that the trace table stored all the actions of the agents.

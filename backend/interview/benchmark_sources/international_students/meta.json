@@ -1,9 +1,0 @@
-{
-  "dataset_name": "international_students",
-  "survey_name": "International Students Time Management Questionnaire",
-  "record_count": 125,
-  "source_paths": {
-    "combined_path": "Time_management_questionnaire.jsonl",
-    "template_path": ""
-  }
-}

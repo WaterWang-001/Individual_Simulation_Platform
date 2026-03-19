@@ -1,9 +1,0 @@
-{
-  "dataset_name": "云南社区调查",
-  "survey_name": "云南省多县社区家庭综合情况调查问卷",
-  "record_count": 20,
-  "source_paths": {
-    "combined_path": "Benchmark/数据/dataset-1216/云南社区调查/Social_questionnaire_combined.jsonl",
-    "template_path": "Benchmark/数据/dataset-1216/云南社区调查/questionnaire-social.json"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "dataset_name": "writers_interview-131",
-  "survey_name": "密歇根大学学生写作能力与写作经历调研",
-  "record_count": 131,
-  "source_paths": {
-    "combined_path": "Benchmark/数据/dataset-1216/writers_interview-131/Writers_questionnaire_combined.jsonl",
-    "template_path": "Benchmark/数据/dataset-1216/writers_interview-131/questionnaire-writers.json"
-  }
-}

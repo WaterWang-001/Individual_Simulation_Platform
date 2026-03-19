@@ -1,0 +1,642 @@
+{
+  "sim_id": "20260317_180212_7612ca",
+  "params": {
+    "num_agents": 28,
+    "num_steps": 12,
+    "tick_seconds": 3600,
+    "concurrency": 5,
+    "start_time": "2024-09-02 08:00:00"
+  },
+  "agents": [
+    {
+      "id": 1,
+      "name": "iamkiki",
+      "mbti": "INTP",
+      "gender": "female",
+      "occupation": "复旦大学学生",
+      "major": "未知",
+      "interests": [
+        "穿搭搭配",
+        "时尚记录",
+        "vlog拍摄",
+        "北美生活体验",
+        "宠物照料",
+        "篮球赛事"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.45
+      },
+      "start_aoi": 500000130
+    },
+    {
+      "id": 2,
+      "name": "上树的🐶",
+      "mbti": "INFJ",
+      "gender": "male",
+      "occupation": "复旦大学本科生",
+      "major": "数学",
+      "interests": [
+        "羽毛球",
+        "古钱币收藏",
+        "摄影/建筑观察",
+        "校园生活记录"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.45
+      },
+      "start_aoi": 500000131
+    },
+    {
+      "id": 3,
+      "name": "这枝鹊-",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学博士生",
+      "major": "迪士尼研究",
+      "interests": [
+        "摄影创作",
+        "迪士尼文化研究",
+        "宠物救助",
+        "美食测评",
+        "时尚穿搭",
+        "学术社交"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500001104
+    },
+    {
+      "id": 4,
+      "name": "蜡笔小蓝",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学研究生",
+      "major": "未知",
+      "interests": [
+        "个人成长",
+        "职场技能",
+        "护肤美容",
+        "社会观察",
+        "文字记录"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500001110
+    },
+    {
+      "id": 5,
+      "name": "Celine 轩伶_4131",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学硕士生",
+      "major": "新闻与传播",
+      "interests": [
+        "追剧（如鱿鱼游戏）",
+        "社交媒体分享（Instagram）",
+        "旅行/探店",
+        "情感生活记录",
+        "美食体验"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500001115
+    },
+    {
+      "id": 6,
+      "name": "桑穹",
+      "mbti": "",
+      "gender": "male",
+      "occupation": "复旦大学学生",
+      "major": "未知",
+      "interests": [
+        "二手交易",
+        "家居整理",
+        "生活用品优化"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500005001
+    },
+    {
+      "id": 7,
+      "name": "冯琳Fairy",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学新闻硕士在读",
+      "major": "新闻学",
+      "interests": [
+        "主持",
+        "旅行",
+        "摄影/VLOG",
+        "古风文化",
+        "时尚穿搭",
+        "音乐（林俊杰）",
+        "阅读"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500027450
+    },
+    {
+      "id": 8,
+      "name": "伢伢gagako",
+      "mbti": "INTJ",
+      "gender": "female",
+      "occupation": "复旦大学学生",
+      "major": "未知",
+      "interests": [
+        "旅行度假",
+        "海岛旅游",
+        "穿搭拍照",
+        "社交媒体分享",
+        "文化交流",
+        "校园生活"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.45
+      },
+      "start_aoi": 500000129
+    },
+    {
+      "id": 9,
+      "name": "心大禾",
+      "mbti": "ENTJ",
+      "gender": "female",
+      "occupation": "复旦大学本科生",
+      "major": "预防医学",
+      "interests": [
+        "地理",
+        "旅行",
+        "文学",
+        "随笔写作",
+        "追剧",
+        "美食"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.65
+      },
+      "start_aoi": 500000132
+    },
+    {
+      "id": 10,
+      "name": "小红薯6853B40A",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学本科生",
+      "major": "未知",
+      "interests": [
+        "教育辅导",
+        "兼职工作",
+        "学习规划",
+        "大学生活分享"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500000576
+    },
+    {
+      "id": 11,
+      "name": "Lamech拉麦",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学博士生",
+      "major": "医学",
+      "interests": [
+        "cosplay",
+        "明日方舟",
+        "Fate/Grand Order",
+        "摄影",
+        "影视欣赏（如《杀死比尔》）"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500000334
+    },
+    {
+      "id": 12,
+      "name": "好多的小小",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学本科生",
+      "major": "未知",
+      "interests": [
+        "时尚穿搭",
+        "旅行摄影",
+        "Vlog制作",
+        "城市漫步",
+        "健康饮食",
+        "毕业纪念"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500003196
+    },
+    {
+      "id": 13,
+      "name": "Schatten los！",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学研究生",
+      "major": "德语相关专业",
+      "interests": [
+        "音乐剧",
+        "德语学习与文化",
+        "剧场艺术",
+        "影视字幕工作",
+        "社交活动"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500000247
+    },
+    {
+      "id": 14,
+      "name": "男性盆底ing",
+      "mbti": "",
+      "gender": "male",
+      "occupation": "复旦大学博士生",
+      "major": "医学相关专业（推测为泌尿外科、康复医学或男科学方向）",
+      "interests": [
+        "医学研究",
+        "男性盆底健康科普",
+        "学术写作",
+        "SCI论文发表",
+        "康复治疗技术",
+        "医学笔记整理"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500000248
+    },
+    {
+      "id": 15,
+      "name": "枕千月Kaxerine",
+      "mbti": "INFP",
+      "gender": "female",
+      "occupation": "复旦大学博士生",
+      "major": "未知",
+      "interests": [
+        "跳舞",
+        "音乐",
+        "舞台表演",
+        "探店",
+        "追星（Jennie）",
+        "社交活动"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.45
+      },
+      "start_aoi": 500000453
+    },
+    {
+      "id": 16,
+      "name": "美丽的巴豆",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学学生",
+      "major": "未知",
+      "interests": [
+        "美妆护肤",
+        "时尚购物",
+        "Vlog拍摄与分享",
+        "考研与学业规划",
+        "奢侈品与海淘"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500004361
+    },
+    {
+      "id": 17,
+      "name": "范斯晶",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学研究生",
+      "major": "新闻传播学",
+      "interests": [
+        "生活记录",
+        "穿搭",
+        "健身",
+        "美食",
+        "旅行",
+        "摄影/VLOG制作",
+        "朋友社交",
+        "微醺酒饮"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500000330
+    },
+    {
+      "id": 18,
+      "name": "超人小姐米兰达",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学学生",
+      "major": "未知",
+      "interests": [
+        "旅行",
+        "摄影",
+        "孕期记录",
+        "学习分享",
+        "生活平衡"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500000332
+    },
+    {
+      "id": 19,
+      "name": "LokCing📷",
+      "mbti": "INTJ",
+      "gender": "female",
+      "occupation": "复旦大学博士生",
+      "major": "药学",
+      "interests": [
+        "摄影",
+        "拍立得",
+        "胶片摄影",
+        "校园记录",
+        "毕业照拍摄",
+        "构图研究"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.45
+      },
+      "start_aoi": 500000336
+    },
+    {
+      "id": 20,
+      "name": "Cassian",
+      "mbti": "",
+      "gender": "male",
+      "occupation": "复旦大学本科生",
+      "major": "未知",
+      "interests": [
+        "摄影",
+        "旅行",
+        "跑步",
+        "羽毛球",
+        "阅读",
+        "街拍",
+        "人像摄影",
+        "城市探索"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500000540
+    },
+    {
+      "id": 21,
+      "name": "Joy小赵",
+      "mbti": "",
+      "gender": "male",
+      "occupation": "复旦大学学生",
+      "major": "未知",
+      "interests": [
+        "旅行",
+        "音乐",
+        "生活记录"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500000130
+    },
+    {
+      "id": 22,
+      "name": "丹柯",
+      "mbti": "",
+      "gender": "male",
+      "occupation": "复旦大学本科生",
+      "major": "历史学",
+      "interests": [
+        "历史",
+        "城市建筑",
+        "骑行",
+        "旅行",
+        "志愿填报辅导",
+        "文化杂谈"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500000131
+    },
+    {
+      "id": 23,
+      "name": "小啦kakakaka",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学博士生",
+      "major": "未知",
+      "interests": [
+        "运动",
+        "美食",
+        "洗浴汗蒸",
+        "休闲体验"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500001104
+    },
+    {
+      "id": 24,
+      "name": "加一份奶盖",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学硕士研究生",
+      "major": "未知",
+      "interests": [
+        "探店美食",
+        "时尚穿搭",
+        "Chiikawa/Hello Kitty等可爱文化",
+        "旅行拍照",
+        "音乐欣赏",
+        "香薰生活",
+        "盲盒收集"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500001110
+    },
+    {
+      "id": 25,
+      "name": "小细菌ya",
+      "mbti": "",
+      "gender": "male",
+      "occupation": "复旦大学研究生在读",
+      "major": "芯片验证/微电子相关",
+      "interests": [
+        "芯片行业动态",
+        "薪资与职业发展",
+        "半导体技术",
+        "校园生活",
+        "天气与自然景观"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500001115
+    },
+    {
+      "id": 26,
+      "name": "型动派（刷脂ing）",
+      "mbti": "",
+      "gender": "male",
+      "occupation": "复旦大学研究生",
+      "major": "未知",
+      "interests": [
+        "健身/刷脂",
+        "社交媒体分享",
+        "自拍/生活记录"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500005001
+    },
+    {
+      "id": 27,
+      "name": "紫苏叶的巴别塔",
+      "mbti": "",
+      "gender": "male",
+      "occupation": "复旦大学硕士研究生",
+      "major": "语言学",
+      "interests": [
+        "语言学",
+        "心理学",
+        "社会学",
+        "烹饪实验",
+        "二手物品交易"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500027450
+    },
+    {
+      "id": 28,
+      "name": "Evelyn在好好生活",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学本科生",
+      "major": "新闻学",
+      "interests": [
+        "新闻与社会议题",
+        "基层实践/驻村体验",
+        "星座与人格分析",
+        "猫咪",
+        "美食（尤其是火锅、牛羊肉）",
+        "考公/省考"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500000129
+    }
+  ],
+  "start_time": "2026-03-17T18:02:12.957468",
+  "status": "running",
+  "total_steps": 12
+}

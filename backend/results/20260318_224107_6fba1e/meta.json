@@ -1,0 +1,238 @@
+{
+  "sim_id": "20260318_224107_6fba1e",
+  "params": {
+    "num_agents": 10,
+    "num_steps": 12,
+    "tick_seconds": 3600,
+    "concurrency": 20,
+    "start_time": "2024-09-02 08:00:00"
+  },
+  "agents": [
+    {
+      "id": 1,
+      "name": "iamkiki",
+      "mbti": "INTP",
+      "gender": "female",
+      "occupation": "复旦大学学生",
+      "major": "未知",
+      "interests": [
+        "穿搭搭配",
+        "时尚记录",
+        "vlog拍摄",
+        "北美生活体验",
+        "宠物照料",
+        "篮球赛事"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.45
+      },
+      "start_aoi": 500000130
+    },
+    {
+      "id": 2,
+      "name": "上树的🐶",
+      "mbti": "INFJ",
+      "gender": "male",
+      "occupation": "复旦大学本科生",
+      "major": "数学",
+      "interests": [
+        "羽毛球",
+        "古钱币收藏",
+        "摄影/建筑观察",
+        "校园生活记录"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.45
+      },
+      "start_aoi": 500000131
+    },
+    {
+      "id": 3,
+      "name": "这枝鹊-",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学博士生",
+      "major": "迪士尼研究",
+      "interests": [
+        "摄影创作",
+        "迪士尼文化研究",
+        "宠物救助",
+        "美食测评",
+        "时尚穿搭",
+        "学术社交"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500001104
+    },
+    {
+      "id": 4,
+      "name": "蜡笔小蓝",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学研究生",
+      "major": "未知",
+      "interests": [
+        "个人成长",
+        "职场技能",
+        "护肤美容",
+        "社会观察",
+        "文字记录"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500001110
+    },
+    {
+      "id": 5,
+      "name": "Celine 轩伶_4131",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学硕士生",
+      "major": "新闻与传播",
+      "interests": [
+        "追剧（如鱿鱼游戏）",
+        "社交媒体分享（Instagram）",
+        "旅行/探店",
+        "情感生活记录",
+        "美食体验"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500001115
+    },
+    {
+      "id": 6,
+      "name": "桑穹",
+      "mbti": "",
+      "gender": "male",
+      "occupation": "复旦大学学生",
+      "major": "未知",
+      "interests": [
+        "二手交易",
+        "家居整理",
+        "生活用品优化"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500005001
+    },
+    {
+      "id": 7,
+      "name": "冯琳Fairy",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学新闻硕士在读",
+      "major": "新闻学",
+      "interests": [
+        "主持",
+        "旅行",
+        "摄影/VLOG",
+        "古风文化",
+        "时尚穿搭",
+        "音乐（林俊杰）",
+        "阅读"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500027450
+    },
+    {
+      "id": 8,
+      "name": "伢伢gagako",
+      "mbti": "INTJ",
+      "gender": "female",
+      "occupation": "复旦大学学生",
+      "major": "未知",
+      "interests": [
+        "旅行度假",
+        "海岛旅游",
+        "穿搭拍照",
+        "社交媒体分享",
+        "文化交流",
+        "校园生活"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.45
+      },
+      "start_aoi": 500000129
+    },
+    {
+      "id": 9,
+      "name": "心大禾",
+      "mbti": "ENTJ",
+      "gender": "female",
+      "occupation": "复旦大学本科生",
+      "major": "预防医学",
+      "interests": [
+        "地理",
+        "旅行",
+        "文学",
+        "随笔写作",
+        "追剧",
+        "美食"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.65
+      },
+      "start_aoi": 500000132
+    },
+    {
+      "id": 10,
+      "name": "小红薯6853B40A",
+      "mbti": "",
+      "gender": "female",
+      "occupation": "复旦大学本科生",
+      "major": "未知",
+      "interests": [
+        "教育辅导",
+        "兼职工作",
+        "学习规划",
+        "大学生活分享"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500000576
+    }
+  ],
+  "start_time": "2026-03-18T22:41:07.277114",
+  "status": "completed",
+  "total_steps": 12,
+  "end_time": "2026-03-18T22:53:38.833314"
+}

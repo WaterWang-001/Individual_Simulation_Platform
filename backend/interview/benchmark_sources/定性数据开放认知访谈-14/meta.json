@@ -1,9 +1,0 @@
-{
-  "dataset_name": "定性数据开放认知访谈-14",
-  "survey_name": "定性数据开放获取态度与实践访谈大纲",
-  "record_count": 15,
-  "source_paths": {
-    "combined_path": "Benchmark/数据/dataset-1216/定性数据开放认知访谈-14/Talk1_questionnaire_combined.jsonl",
-    "template_path": "Benchmark/数据/dataset-1216/定性数据开放认知访谈-14/questionaire-talk1.json"
-  }
-}

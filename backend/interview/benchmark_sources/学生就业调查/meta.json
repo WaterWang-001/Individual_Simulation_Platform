@@ -1,9 +1,0 @@
-{
-  "dataset_name": "学生就业调查",
-  "survey_name": "大学生毕业就业选择调研问卷大纲",
-  "record_count": 20,
-  "source_paths": {
-    "combined_path": "Benchmark/数据/dataset-1216/学生就业调查/Labour_questionnaire_combined.jsonl",
-    "template_path": "Benchmark/数据/dataset-1216/学生就业调查/questionnaire-labour.json"
-  }
-}

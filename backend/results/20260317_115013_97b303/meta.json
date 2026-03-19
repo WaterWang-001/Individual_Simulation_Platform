@@ -1,0 +1,105 @@
+{
+  "sim_id": "20260317_115013_97b303",
+  "params": {
+    "num_agents": 4,
+    "num_steps": 5,
+    "tick_seconds": 3600,
+    "concurrency": 5,
+    "start_time": "2024-09-02 08:00:00"
+  },
+  "agents": [
+    {
+      "id": 1,
+      "name": "iamkiki",
+      "mbti": "INTP",
+      "gender": "unknown",
+      "occupation": "复旦大学学生",
+      "major": "未知",
+      "interests": [
+        "穿搭搭配",
+        "时尚记录",
+        "vlog拍摄",
+        "北美生活体验",
+        "宠物照料",
+        "篮球赛事"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.45
+      },
+      "start_aoi": 500000130
+    },
+    {
+      "id": 2,
+      "name": "上树的🐶",
+      "mbti": "INFJ",
+      "gender": "unknown",
+      "occupation": "复旦大学本科生",
+      "major": "数学",
+      "interests": [
+        "羽毛球",
+        "古钱币收藏",
+        "摄影/建筑观察",
+        "校园生活记录"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.45
+      },
+      "start_aoi": 500000131
+    },
+    {
+      "id": 3,
+      "name": "这枝鹊-",
+      "mbti": "",
+      "gender": "unknown",
+      "occupation": "复旦大学博士生",
+      "major": "迪士尼研究",
+      "interests": [
+        "摄影创作",
+        "迪士尼文化研究",
+        "宠物救助",
+        "美食测评",
+        "时尚穿搭",
+        "学术社交"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500001104
+    },
+    {
+      "id": 4,
+      "name": "蜡笔小蓝",
+      "mbti": "",
+      "gender": "unknown",
+      "occupation": "复旦大学研究生",
+      "major": "未知",
+      "interests": [
+        "个人成长",
+        "职场技能",
+        "护肤美容",
+        "社会观察",
+        "文字记录"
+      ],
+      "initial_needs": {
+        "satiety": 0.7,
+        "energy": 0.8,
+        "safety": 0.9,
+        "social": 0.55
+      },
+      "start_aoi": 500001110
+    }
+  ],
+  "start_time": "2026-03-17T11:50:13.799823",
+  "status": "completed",
+  "total_steps": 5,
+  "end_time": "2026-03-17T11:54:40.001813"
+}

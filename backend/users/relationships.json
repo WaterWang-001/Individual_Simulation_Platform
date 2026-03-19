@@ -1,0 +1,334 @@
+{
+  "relationships": [
+    {
+      "agent1": "100476399",
+      "agent2": "110831307",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "100476399",
+      "agent2": "309589hhxxttxs",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "100476399",
+      "agent2": "5179480204",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "100476399",
+      "agent2": "723131499",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "100476399",
+      "agent2": "843616573",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "100476399",
+      "agent2": "9204142586",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "110831307",
+      "agent2": "606781337",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "110831307",
+      "agent2": "7421682908",
+      "type": "学长-学弟妹",
+      "directed": true
+    },
+    {
+      "agent1": "110831307",
+      "agent2": "801837713",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "1476404558",
+      "agent2": "406482861",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "1476404558",
+      "agent2": "808061759",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "1476404558",
+      "agent2": "95062956608",
+      "type": "学习小组",
+      "directed": false
+    },
+    {
+      "agent1": "1476404558",
+      "agent2": "9777451154",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "159288583",
+      "agent2": "19971019FY",
+      "type": "同班同学",
+      "directed": false
+    },
+    {
+      "agent1": "159288583",
+      "agent2": "535744792",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "159288583",
+      "agent2": "843616573",
+      "type": "学长-学弟妹",
+      "directed": true
+    },
+    {
+      "agent1": "19971019FY",
+      "agent2": "309589hhxxttxs",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "19971019FY",
+      "agent2": "978250574",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "264571229",
+      "agent2": "406482861",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "637790625",
+      "agent2": "26509738327",
+      "type": "学长-学弟妹",
+      "directed": true
+    },
+    {
+      "agent1": "26509738327",
+      "agent2": "808061759",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "95062956608",
+      "agent2": "26509738327",
+      "type": "学长-学弟妹",
+      "directed": true
+    },
+    {
+      "agent1": "26802956284",
+      "agent2": "406482861",
+      "type": "兼职同事",
+      "directed": false
+    },
+    {
+      "agent1": "26802956284",
+      "agent2": "714179191",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "26802956284",
+      "agent2": "723131499",
+      "type": "普通朋友",
+      "directed": false
+    },
+    {
+      "agent1": "26802956284",
+      "agent2": "843616573",
+      "type": "学习小组",
+      "directed": false
+    },
+    {
+      "agent1": "26802956284",
+      "agent2": "9777451154",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "oyy0729",
+      "agent2": "26802956284",
+      "type": "导师-学生",
+      "directed": true
+    },
+    {
+      "agent1": "276884855",
+      "agent2": "5179480204",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "276884855",
+      "agent2": "941345259",
+      "type": "课题组成员",
+      "directed": false
+    },
+    {
+      "agent1": "406482861",
+      "agent2": "535744792",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "462145119",
+      "agent2": "95062956608",
+      "type": "导师-学生",
+      "directed": true
+    },
+    {
+      "agent1": "5179480204",
+      "agent2": "604905821",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "5179480204",
+      "agent2": "941345259",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "5179480204",
+      "agent2": "978250574",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "535744792",
+      "agent2": "604905821",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "604905821",
+      "agent2": "978250574",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "606781337",
+      "agent2": "808061759",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "606781337",
+      "agent2": "9777451154",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "oyy0729",
+      "agent2": "606781337",
+      "type": "导师-学生",
+      "directed": true
+    },
+    {
+      "agent1": "637790625",
+      "agent2": "808061759",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "637790625",
+      "agent2": "9204142586",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "637790625",
+      "agent2": "972020894",
+      "type": "课题组成员",
+      "directed": false
+    },
+    {
+      "agent1": "714179191",
+      "agent2": "816928434",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "714179191",
+      "agent2": "978250574",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "723131499",
+      "agent2": "7421682908",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "723131499",
+      "agent2": "843616573",
+      "type": "学习小组",
+      "directed": false
+    },
+    {
+      "agent1": "723131499",
+      "agent2": "95062956608",
+      "type": "兼职同事",
+      "directed": false
+    },
+    {
+      "agent1": "816928434",
+      "agent2": "7421682908",
+      "type": "学长-学弟妹",
+      "directed": true
+    },
+    {
+      "agent1": "7421682908",
+      "agent2": "9204142586",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "808061759",
+      "agent2": "972020894",
+      "type": "社团成员",
+      "directed": false
+    },
+    {
+      "agent1": "8155850635",
+      "agent2": "941345259",
+      "type": "课题组成员",
+      "directed": false
+    },
+    {
+      "agent1": "816928434",
+      "agent2": "978250574",
+      "type": "好友",
+      "directed": false
+    },
+    {
+      "agent1": "843616573",
+      "agent2": "9204142586",
+      "type": "同班同学",
+      "directed": false
+    },
+    {
+      "agent1": "843616573",
+      "agent2": "95062956608",
+      "type": "学习小组",
+      "directed": false
+    }
+  ]
+}

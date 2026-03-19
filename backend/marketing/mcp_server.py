@@ -838,4 +838,4 @@ def get_latest_posts(db_path: str | None = None, limit: int = 20) -> dict[str, A
 
 
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=8001)

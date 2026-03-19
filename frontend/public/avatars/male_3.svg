@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- shirt -->
+  <ellipse cx="32" cy="60" rx="14" ry="8" fill="#E87040"/>
+  <!-- curly hair: overlapping circles + fill rect -->
+  <circle cx="20" cy="26" r="8" fill="#1A1A1A"/>
+  <circle cx="32" cy="20" r="9" fill="#1A1A1A"/>
+  <circle cx="44" cy="26" r="8" fill="#1A1A1A"/>
+  <rect x="18" y="25" width="28" height="12" fill="#1A1A1A"/>
+  <!-- face -->
+  <circle cx="32" cy="36" r="14" fill="#FFCC99"/>
+  <!-- eyebrows -->
+  <path d="M24 29 L30 28" stroke="#333" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M34 28 L40 29" stroke="#333" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- eyes -->
+  <circle cx="27" cy="33" r="2.2" fill="#333"/>
+  <circle cx="37" cy="33" r="2.2" fill="#333"/>
+  <circle cx="27.9" cy="32.2" r="0.9" fill="white"/>
+  <circle cx="37.9" cy="32.2" r="0.9" fill="white"/>
+  <!-- nose -->
+  <ellipse cx="32" cy="37.5" rx="1.5" ry="1" fill="#EEB07A" opacity="0.7"/>
+  <!-- mouth -->
+  <path d="M28 41 Q32 45 36 41" stroke="#CC4444" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,9 +1,0 @@
-{
-  "dataset_name": "开放教育访谈-10",
-  "survey_name": "开放教育实践访谈大纲",
-  "record_count": 8,
-  "source_paths": {
-    "combined_path": "Benchmark/数据/dataset-1216/开放教育访谈-10/Education_questionnaire_combined.jsonl",
-    "template_path": "Benchmark/数据/dataset-1216/开放教育访谈-10/questionnaire-education.json"
-  }
-}
